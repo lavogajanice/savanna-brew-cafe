@@ -1,0 +1,814 @@
+/* GENERAL STYLING */
+
+:root {
+    --brown: #6F4E37;
+    --cream: #F5E9DA;
+    --orange: #D9822B;
+    --dark: #2B1B12;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--cream);
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--brown);
+    color: var(--white);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    margin: 0;
+}
+
+/* NAVIGATION */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--orange);
+}
+
+/* HERO SECTION */
+
+.hero {
+    background-image: linear-gradient(
+        rgba(43, 27, 18, 0.6),
+        rgba(43, 27, 18, 0.6)
+    ), url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: var(--white);
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* BUTTONS */
+
+.hero a,
+.visit a {
+    display: inline-block;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.hero a:hover,
+.visit a:hover {
+    background-color: var(--brown);
+}
+
+/* FEATURED SECTION */
+
+.featured {
+    padding: 50px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.featured h2 {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.card {
+    flex: 1 1 250px;
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .featured {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+}
+
+
+
+/* =================================
+   ABOUT PAGE STYLING
+================================= */
+
+
+/* ABOUT INTRODUCTION */
+
+.about-intro {
+    background-color: var(--cream);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.about-intro h1 {
+    color: var(--brown);
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.about-intro p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+
+/* ABOUT STORY SECTION */
+
+.about-story {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 8%;
+    background-color: var(--white);
+}
+
+.about-image,
+.about-text {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-text h2 {
+    color: var(--brown);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+
+/* OUR VALUES SECTION */
+
+.our-values {
+    padding: 60px 8%;
+    text-align: center;
+    background-color: var(--cream);
+}
+
+.our-values h2 {
+    color: var(--brown);
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.our-values > p {
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+
+/* VALUES CARDS */
+
+.values-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.value-card {
+    flex: 1;
+    background-color: var(--white);
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+}
+
+.value-card h3 {
+    color: var(--orange);
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+
+/* OUR COMMITMENT SECTION */
+
+.our-commitment {
+    background-color: var(--brown);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.our-commitment h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.our-commitment p {
+    max-width: 750px;
+    margin: 0 auto 20px;
+}
+
+.our-commitment blockquote {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 20px;
+    border-left: 4px solid var(--orange);
+    font-style: italic;
+    font-size: 20px;
+}
+
+.our-commitment a {
+    display: inline-block;
+    background-color: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.our-commitment a:hover {
+    background-color: var(--dark);
+}
+
+
+/* ACTIVE NAVIGATION LINK */
+
+nav a.active {
+    color: var(--orange);
+    border-bottom: 2px solid var(--orange);
+    padding-bottom: 5px;
+}
+
+
+/* ABOUT PAGE RESPONSIVE DESIGN */
+
+@media screen and (max-width: 768px) {
+
+    .about-intro h1 {
+        font-size: 32px;
+    }
+
+    .about-story {
+        flex-direction: column;
+        padding: 40px 5%;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    .values-container {
+        flex-direction: column;
+    }
+
+    .our-commitment blockquote {
+        font-size: 18px;
+    }
+
+}
+
+
+
+
+/* =================================
+   MENU PAGE STYLING
+================================= */
+
+
+/* MENU INTRODUCTION */
+
+.menu-intro {
+    background-color: var(--cream);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.menu-intro h1 {
+    color: var(--brown);
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.menu-intro p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+
+/* MENU SECTIONS */
+
+.menu-section {
+    padding: 40px 8%;
+    background-color: var(--white);
+}
+
+.menu-section h2 {
+    color: var(--brown);
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--orange);
+    padding-bottom: 10px;
+}
+
+
+/* TABLE CONTAINER */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* MENU TABLE */
+
+.menu-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+
+/* TABLE HEADINGS */
+
+.menu-section thead {
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+.menu-section th {
+    padding: 15px;
+    text-align: left;
+}
+
+
+/* TABLE DATA */
+
+.menu-section td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* ZEBRA STRIPING */
+
+.menu-section tbody tr:nth-child(even) {
+    background-color: var(--cream);
+}
+
+
+/* TABLE HOVER EFFECT */
+
+.menu-section tbody tr:hover {
+    background-color: #EAD5BF;
+}
+
+
+/* ALIGN PRICES TO THE RIGHT */
+
+.menu-section th:last-child,
+.menu-section td:last-child {
+    text-align: right;
+}
+
+
+
+/* =================================
+   GALLERY PAGE STYLING
+================================= */
+
+/* GALLERY INTRODUCTION */
+.gallery-intro {
+    background-color: var(--cream);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.gallery-intro h1 {
+    color: var(--brown);
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.gallery-intro p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* GALLERY SECTION */
+.gallery-section {
+    background-color: var(--cream);
+    padding: 50px 8%;
+}
+
+.gallery-section h2 {
+    color: var(--brown);
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+/* GALLERY GRID */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* GALLERY FIGURES */
+.gallery-container figure {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* GALLERY IMAGES */
+.gallery-container img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* IMAGE CAPTIONS */
+.gallery-container figcaption {
+    color: var(--brown);
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+}
+
+/* IMAGE HOVER EFFECT */
+.gallery-container figure:hover {
+    transform: translateY(-5px);
+}
+
+/* GALLERY CLOSING MESSAGE */
+.gallery-message {
+    background-color: var(--brown);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.gallery-message h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.gallery-message p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+}
+
+.gallery-message a {
+    display: inline-block;
+    background-color: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-message a:hover {
+    background-color: var(--dark);
+}
+
+/* GALLERY RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+
+    .gallery-intro h1 {
+        font-size: 32px;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .gallery-section {
+        padding: 35px 5%;
+    }
+
+    .gallery-container img {
+        height: 180px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-container img {
+        height: 230px;
+    }
+
+}
+
+
+
+/* =================================
+   CONTACT PAGE STYLING
+================================= */
+
+/* CONTACT INTRODUCTION */
+.contact-intro {
+    background-color: var(--cream);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact-intro h1 {
+    color: var(--brown);
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.contact-intro p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 50px 8%;
+    background-color: var(--cream);
+    align-items: start;
+}
+
+/* FORM CONTAINER */
+.contact-form {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2,
+.contact-information h2 {
+    color: var(--brown);
+    margin-bottom: 25px;
+}
+
+/* FORM LABELS */
+.contact-form label {
+    display: block;
+    color: var(--dark);
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+/* INPUT FIELDS */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="date"],
+.contact-form input[type="time"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+/* FOCUS EFFECT */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--orange);
+    box-shadow: 0 0 5px rgba(217, 130, 43, 0.3);
+}
+
+/* OCCASION FIELDSET */
+.contact-form fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.contact-form legend {
+    color: var(--brown);
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.contact-form fieldset label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+.contact-form input[type="radio"] {
+    accent-color: var(--orange);
+}
+
+/* TEXTAREA */
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* SUBMIT BUTTON */
+.contact-form button {
+    width: 100%;
+    background-color: var(--brown);
+    color: var(--white);
+    border: none;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--orange);
+}
+
+/* CONTACT INFORMATION */
+.contact-information {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-information h3 {
+    color: var(--brown);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.contact-information p {
+    color: var(--dark);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.contact-information a {
+    color: var(--brown);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-information a:hover {
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+/* OPENING HOURS TABLE */
+.contact-information table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.contact-information th {
+    background-color: var(--brown);
+    color: var(--white);
+    padding: 12px;
+    text-align: left;
+}
+
+.contact-information td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.contact-information tbody tr:nth-child(even) {
+    background-color: var(--cream);
+}
+
+/* CONTACT RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+
+    .contact-intro h1 {
+        font-size: 32px;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        padding: 30px 5%;
+        gap: 25px;
+    }
+
+    .contact-form,
+    .contact-information {
+        padding: 20px;
+    }
+
+}
